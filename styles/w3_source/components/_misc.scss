@@ -1,0 +1,64 @@
+.#{$b}-block {
+    display: block;
+    width: 100%;
+}
+
+.#{$b}-section,
+%section { // extended by basic/formatting/typography/.#{$b}-code
+    @include margin(top);
+    @include margin(bottom);
+}
+
+.#{$b}-container,
+%container { // extended by components/misc/.#{$b}-panel
+    padding: 0.01em 16px;
+    @extend %clear; // extended from utilities/responsive/.#{$b}-clear
+}
+
+.#{$b}-panel {
+    @extend %container; // extended from components/misc/.#{$b}-container
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.#{$b}-tag,
+%tag { // extended by components/misc/.#{$b}-badge
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    @include align(center);
+}
+
+.#{$b}-badge {
+    @extend %tag; // extended from components/misc/.#{$b}-tag
+    @include circle;
+}
+
+.#{$b}-card,
+%card { // extended by components/misc/.#{$b}-card-2
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+    &-2 {
+        @extend %card; // extended from components/misc/.#{$b}-card
+    }
+
+    &-4 {
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+.#{$b}-tooltip {
+    position: relative;
+
+    .#{$b}-text {
+        display: none;
+    }
+
+    &:hover {
+        .#{$b}-text {
+            display: inline-block;
+        }
+    }
+}

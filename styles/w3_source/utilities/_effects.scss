@@ -1,0 +1,109 @@
+.#{$b}-ripple {
+    transition: opacity 0s;
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+.#{$b}-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 00, 0, 0.5);
+    z-index: 2;
+}
+
+.#{$b}-transparent,
+%bg-transparent {
+    background-color: transparent!important;
+}
+
+.#{$b}-hover {
+
+    &-shadow {
+        &:hover {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+
+    &-none {
+        &:hover {
+            @extend %bg-transparent;
+
+            box-shadow: none!important;
+        }
+    }
+
+    &-opacity {
+        @at-root .#{$b}-opacity,
+        &:hover {
+            opacity: 0.60;
+        }
+
+        &-off {
+            @at-root .#{$b}-opacity-off,
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        @at-root .#{$b}-opacity {
+            &-max {
+                opacity:0.25;
+            }
+    
+            &-min {
+                opacity:0.75;
+            }
+        }
+    }
+
+    &-greyscale,
+    &-grayscale {
+        @at-root {
+            .#{$b}-greyscale,
+            .#{$b}-grayscale {
+                filter: grayscale(75%);
+                
+                @at-root %grayscale-max,
+                &-max {
+                    filter: grayscale(100%);
+                }
+                
+                &-min {
+                    filter: grayscale(50%);
+                }
+            }
+        }
+
+        &:hover {
+            @extend %grayscale-max;
+        }
+    }
+
+    &-sepia {
+        @at-root {
+            .#{$b}-sepia {
+                filter:sepia(75%);
+
+                @at-root %sepia-max,
+                &-max {
+                    filter:sepia(100%);
+                }
+
+                &-min {
+                    filter:sepia(50%);
+                }
+            }
+        }
+        &:hover {
+            @extend %sepia-max;
+        }
+    }
+}

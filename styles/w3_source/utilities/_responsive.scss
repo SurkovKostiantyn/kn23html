@@ -1,0 +1,207 @@
+.#{$b}-responsive {
+    display: block;
+    overflow-x: auto;
+}
+
+.#{$b}-row,
+.#{$b}-row-padding,
+.#{$b}-cell-row,
+.#{$b}-clear,
+%clear { // extended by components/misc/.#{$b}-container
+        // extended by components/misc/.#{$b}-panel
+        // extended by components/bars/.#{$b}-bar
+    @include clear;
+}
+
+.#{$b}-col,
+.#{$b}-half,
+.#{$b}-third,
+.#{$b}-twothird,
+.#{$b}-threequarter,
+.#{$b}-quarter {
+    float: left;
+    width: 100%;
+}
+
+.#{$b}-col {
+    &.s1 {
+        width: 8.33333%;
+    }
+    &.s2 {
+        width: 16.66666%;
+    }
+    &.s3 {
+        width: 24.99999%;
+    }
+    &.s4 {
+        width: 33.33333%;
+    }
+    &.s5 {
+        width: 41.66666%;
+    }
+    &.s6 {
+        width: 49.99999%;
+    }
+    &.s7 {
+        width: 58.33333%;
+    }
+    &.s8 {
+        width: 66.66666%;
+    }
+    &.s9 {
+        width: 74.99999%;
+    }
+    &.s10 {
+        width: 83.33333%;
+    }
+    &.s11 {
+        width: 91.66666%;
+    }
+    &.s12 {
+        width: 99.99999%;
+    }
+
+    @include bp(bp-sm) {
+        &.m1 {
+            width: 8.33333%;
+        }
+        &.m2 {
+            width: 16.66666%;
+        }
+        @at-root .#{$b}-quarter,
+        &.m3 {
+            width: 24.99999%;
+        }
+        @at-root .#{$b}-third,
+        &.m4 {
+            width: 33.33333%;
+        }
+        &.m5 {
+            width: 41.66666%;
+        }
+        @at-root .#{$b}-half,
+        &.m6 {
+            width: 49.99999%;
+        }
+        &.m7 {
+            width: 58.33333%;
+        }
+        @at-root .#{$b}-twothird,
+        &.m8 {
+            width: 66.66666%;
+        }
+        @at-root .#{$b}-threequarter,
+        &.m9 {
+            width: 74.99999%;
+        }
+        &.m10 {
+            width: 83.33333%;
+        }
+        &.m11 {
+            width: 91.66666%;
+        }
+        &.m12 {
+            width: 99.99999%;
+        }
+    }
+
+    @include bp(bp-lg) {
+        &.l1 {
+            width: 8.33333%;
+        }
+        &.l2 {
+            width: 16.66666%;
+        }
+        &.l3 {
+            width: 24.99999%;
+        }
+        &.l4 {
+            width: 33.33333%;
+        }
+        &.l5 {
+            width: 41.66666%;
+        }
+        &.l6 {
+            width: 49.99999%;
+        }
+        &.l7 {
+            width: 58.33333%;
+        }
+        &.l8 {
+            width: 66.66666%;
+        }
+        &.l9 {
+            width: 74.99999%;
+        }
+        &.l10 {
+            width: 83.33333%;
+        }
+        &.l11 {
+            width: 91.66666%;
+        }
+        &.l12 {
+            width: 99.99999%;
+        }
+    }
+}
+
+.#{$b}-rest {
+    overflow: hidden;
+}
+
+.#{$b}-stretch {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.#{$b}-auto,
+%auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.#{$b}-auto {
+    max-width: 1140px;
+
+    @include bp(lg) {
+        max-width: 95%;
+    }
+
+    @include bp(md) {
+        max-width: 100%;
+    }
+}
+
+.#{$b}-content {
+    @extend %auto;
+
+    max-width: 980px;
+}
+
+@include bp(xs) {
+    .#{$b}-mobile {
+        display: block;
+        width: 100%!important;
+    }
+}
+
+.#{$b}-cell {
+    display: table-cell;
+
+    &-row {
+        display: table;
+        width: 100%;
+    }
+
+    &-top {
+        vertical-align: top;
+    }
+
+    &-middle {
+        vertical-align: middle;
+    }
+
+    &-bottom {
+        vertical-align: bottom;
+    }
+}

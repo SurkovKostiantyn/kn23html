@@ -1,0 +1,135 @@
+.#{$b}-animate {
+
+    @at-root .#{$b}-spin {
+        @include animation(#{$b}-spin 2s infinite linear);
+    }
+    @include keyframes(#{$b}-spin) {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(359deg);
+        }
+    }
+
+    &-fading {
+        @include animation(fading 10s infinite);
+    }
+    @include keyframes(fading) {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    &-opacity {
+        @include animation(opac 0.8s);
+    }
+    @include keyframes(opac) {
+        from {
+            opacity: 0;
+        } 
+        to {
+            opacity: 1;
+        }
+    }
+
+    &-top {
+        position: relative;
+        @include animation(animatetop 0.4s);
+    }
+    @include keyframes(animatetop) {
+        from {
+            top: -300px;
+            opacity :0;
+        } 
+        to {
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    &-left {
+        position: relative;
+        @include animation(animationleft 0.4s);
+    }
+    @include keyframes(animationleft) {
+        from {
+            left: -300px;
+            opacity: 0;
+        } 
+        to {
+            left: 0;
+            opacity: 1;
+        }
+    }
+
+    &-right {
+        position: relative;
+        @include animation(animateright 0.4s);
+    }
+    @include keyframes(animateright) {
+        from {
+            right: -300px;
+            opacity: 0;
+        } 
+        to {
+            right: 0;
+            opacity: 1;
+        }
+    }
+
+    &-bottom {
+        position: relative;
+        @include animation(animatebottom 0.4s);
+    }
+    @include keyframes(animatebottom) {
+        from {
+            bottom: -300px;
+            opacity: 0;
+        } 
+        to {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+
+    &-zoom {
+        @include animation(animatezoom 0.6s);
+    }
+    @include keyframes(animatezoom) {
+        from {
+            transform: scale(0);
+        } 
+        to {
+            transform: scale(1);
+        }
+    }
+
+    &-input {
+        transition: width 0.4s ease-in-out;
+
+        &:focus {
+            width: 100%!important;
+        }
+    }
+}
+
+%main,
+#main {
+    transition: margin-left .4s;
+}
+
+.#{$b}-main {
+    @extend %main;
+
+    @include bp(md) {
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+}

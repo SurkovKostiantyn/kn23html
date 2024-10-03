@@ -1,0 +1,131 @@
+.#{$b}-display {
+
+    &-topleft {
+        @include display(position);
+        @include display(topleft);
+    }
+
+    &-topright {
+        @include display(position);
+        @include display(topright);
+    }
+
+    &-bottomleft {
+        @include display(position);
+        @include display(bottomleft);
+    }
+
+    &-bottomright {
+        @include display(position);
+        @include display(bottomright);
+    }
+
+    &-middle {
+        @include display(position);
+        @include display(middle);
+    }
+
+    &-left {
+        @include display(position);
+        @include display(left);
+    }
+
+    &-right {
+        @include display(position);
+        @include display(right);
+    }
+
+    &-topmiddle {
+        @include display(position);
+        @include display(topmiddle);
+    }
+
+    &-bottommiddle {
+        @include display(position);
+        @include display(bottommiddle);
+    }
+
+    &-container {
+        @include display(container);
+
+        &:hover {
+            .#{$b}-display-hover {
+                display: block;
+            }
+
+            span {
+                &.#{$b}-display-hover {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    &-hover {
+        display: none;
+    }
+
+    &-position {
+        @include display(position);
+    }
+}
+
+.#{$b}-left {
+    @include float(left);
+}
+
+.#{$b}-right {
+    @include float(right);
+}
+
+%fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.#{$b}-top {
+    @extend %fixed;
+    top: 0;
+}
+
+.#{$b}-bottom {
+    @extend %fixed;
+    bottom: 0;
+}
+
+.#{$b}-hide {
+    display: none!important;
+
+    @include bp(xs) {
+        &-small {
+            display: none!important;;
+        }
+    }
+
+    @include bp(bp-lg) {
+        &-large {
+            display: none!important;;
+        }
+    }
+
+    @include bp(md-bp-sm) {
+        &-medium {
+            display: none!important;;
+        }
+    }
+}
+
+%show,
+.#{$b}-show {
+    display: block!important;
+
+    &-block {
+        @extend %show;
+    }
+
+    &-inline-block {
+        display: inline-block!important;
+    }
+}
+
