@@ -1,0 +1,20 @@
+
+// Приклад 1
+@mixin blockProperties(){
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+// Приклад 2
+@mixin btnProperties($color, $bgColor){
+  color: $color;
+  background-color: $bgColor;
+}
+
+$mainColor: green;
+$secondaryColor: lighten($mainColor, 25);
+
+$mainTextColor: black;
+$mainBgColor: invert($mainTextColor);

@@ -1,1 +1,7 @@
 @use "../variables/_var" as var;
+
+
+.banner{
+  color: var.$bannerTextColor;
+}
+
