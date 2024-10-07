@@ -1,1 +1,13 @@
 @use "../variables/_var" as var;
+@use "../mixins/mixins" as mix;
+
+.button{
+  @include mix.prefix(transition,all 0.7s ease);
+  background-color: var.$mainBgColor;
+  color: var.$navTextColor;
+}
+
+.button:hover{
+  color: invert(var.$navTextColor);
+  background-color: invert(var.$mainBgColor);
+}

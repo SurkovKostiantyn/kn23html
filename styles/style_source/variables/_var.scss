@@ -1,10 +1,10 @@
 
 // variables for colors
-$navTextColor: #black;
-$bannerTextColor: #red;
+$navTextColor: #000;
+$bannerTextColor: rgb(255,0,0);
 
-$mainColor: green;
+$mainColor: rgb(0,255,0);
 $secondaryColor: lighten($mainColor, 25);
 
-$mainTextColor: black;
+$mainTextColor: #000;
 $mainBgColor: invert($mainTextColor);

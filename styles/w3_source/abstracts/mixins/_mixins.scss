@@ -31,7 +31,7 @@
 }
 
 // Paddings
-$u: px;
+$u:px;
 @mixin padding($arg: medium, $val: 16) {
     @if $arg == small {
         padding: #{$val * 0.25 + $u} #{$val * 0.5 + $u}!important;
