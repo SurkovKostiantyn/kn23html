@@ -3,7 +3,7 @@
 const elementsForEditing =  [
     {
         tag: 'p',
-        properties: ['color', 'font-size', 'line-height', 'text-align', 'margin', 'padding']
+        properties: ['color', 'font-size', 'line-height', 'text-align', 'margin', 'padding', 'background-color']
     },
     {
         tag: 'a',
