@@ -1,9 +1,9 @@
 @import "common/_normalize";
 
+@import "mixins/_mixins.scss";
+
 @import "parts/header";
 @import "parts/banner";
 @import "parts/gallery";
 @import "parts/main";
 @import "parts/footer";
-
-@import "mixins/_mixins.scss";
